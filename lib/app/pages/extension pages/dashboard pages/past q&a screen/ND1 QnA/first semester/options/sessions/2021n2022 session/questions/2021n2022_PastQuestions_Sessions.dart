@@ -22,12 +22,6 @@ class _STB122_2021_2022_Past_QuestionsState
         elevation: 10,
         foregroundColor: kAccentColor,
         backgroundColor: Colors.white,
-        title: const Text(
-          "",
-          style: TextStyle(
-            color: kAccentColor,
-          ),
-        ),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(5),

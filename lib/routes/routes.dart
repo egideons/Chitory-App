@@ -2,6 +2,7 @@ import 'package:chitory_app/app/pages/extension%20pages/dashboard%20pages/lectur
 import 'package:chitory_app/app/pages/extension%20pages/dashboard%20pages/lecture%20notes/nd1_notes/first%20semester%20notes/screens/GNS%20125/gns125_note.dart';
 import 'package:chitory_app/app/pages/extension%20pages/dashboard%20pages/lecture%20notes/nd1_notes/first%20semester%20notes/screens/GNS%20125/gns125_screen.dart';
 import 'package:chitory_app/app/pages/extension%20pages/dashboard%20pages/past%20q&a%20screen/ND1%20QnA/first%20semester/first%20semester%20Q&A%20screen/first%20semester%20Q&A.dart';
+import 'package:chitory_app/app/pages/extension%20pages/dashboard%20pages/past%20q&a%20screen/ND1%20QnA/first%20semester/options/sessions/2021n2022%20session/questions/2021n2022_PastQuestions_Sessions.dart';
 import 'package:chitory_app/app/pages/extension%20pages/dashboard%20pages/past%20q&a%20screen/ND1%20QnA/first%20semester/options/stb122_past_Q&A.dart';
 import 'package:chitory_app/app/pages/extension%20pages/dashboard%20pages/semester%20results/levels/nd1_level_results.dart';
 import 'package:chitory_app/app/pages/home%20wrapper/homeWrapper.dart';
@@ -53,6 +54,8 @@ Map<String, WidgetBuilder> routes = {
   FirstSemesterQnA.routeName: (context) => const FirstSemesterQnA(),
   STB122_PastQnA_Sessions.routeName: (context) =>
       const STB122_PastQnA_Sessions(),
+  STB122_2021_2022_Past_Questions.routeName: (context) =>
+      const STB122_2021_2022_Past_Questions(),
 
   //Results Pages
   ND1_Level_Results.routeName: (context) => const ND1_Level_Results(),
