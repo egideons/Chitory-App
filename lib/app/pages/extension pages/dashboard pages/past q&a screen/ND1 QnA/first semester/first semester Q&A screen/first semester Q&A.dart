@@ -112,7 +112,7 @@ class _FirstSemesterQnAState extends State<FirstSemesterQnA> {
                         setState(() {
                           Navigator.pushNamed(
                             context,
-                            '',
+                            'STB122 Past Q&A Sessions',
                           );
                         });
                       },

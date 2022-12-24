@@ -118,7 +118,7 @@ class _STB122_PastQnA_SessionsState extends State<STB122_PastQnA_Sessions> {
                         setState(() {
                           Navigator.pushNamed(
                             context,
-                            '',
+                            'STB122 2021/2022 Past Questions',
                           );
                         });
                       },

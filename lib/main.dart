@@ -1,4 +1,4 @@
-import 'package:chitory_app/app/pages/main%20pages/dashboard/dashboard.dart';
+import 'package:chitory_app/app/pages/extension%20pages/dashboard%20pages/past%20q&a%20screen/ND1%20QnA/first%20semester/first%20semester%20Q&A%20screen/first%20semester%20Q&A.dart';
 import 'package:chitory_app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Chitory',
       debugShowCheckedModeBanner: false,
-      initialRoute: Dashboard.routeName,
+      initialRoute: FirstSemesterQnA.routeName,
       routes: routes,
     );
   }
