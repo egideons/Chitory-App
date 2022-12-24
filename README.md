@@ -1,6 +1,6 @@
 # Chitory App
 
-An educational app students in higher institutions 
+An educational app for students in higher institutions 
 
 ## Getting Started
 - Flutter
