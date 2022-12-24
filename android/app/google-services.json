@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "919902087604",
+    "project_id": "chitory-app",
+    "storage_bucket": "chitory-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919902087604:android:54921574aac47250956ae1",
+        "android_client_info": {
+          "package_name": "com.chitory.chitory_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919902087604-odd28rv6l6oq8e1j30bflq3bakiic9hv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP6-Ot_nGaM7tyQgp2QAHQJu6gR8q1I6I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "919902087604-odd28rv6l6oq8e1j30bflq3bakiic9hv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "919902087604-09j9hgotidbfl04f8h04iodm3fc5tndt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chitoryApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
