@@ -91,8 +91,10 @@ class _STB122_2021_2022_Past_QuestionsState
                           onPressed: () {
                             setState(
                               () {
-                                Navigator.pushNamed(context,
-                                    "STB122 2021/2022 Answers To Past Questions Section A");
+                                Navigator.pushNamed(
+                                  context,
+                                  "STB122 2021/2022 Answers To Past Questions Section A",
+                                );
                               },
                             );
                           },
@@ -134,8 +136,10 @@ class _STB122_2021_2022_Past_QuestionsState
                           onPressed: () {
                             setState(
                               () {
-                                Navigator.pushNamed(context,
-                                    "STB122 2021/2022 Answers To Past Questions Section B");
+                                Navigator.pushNamed(
+                                  context,
+                                  "STB122 2021/2022 Answers To Past Questions Section B",
+                                );
                               },
                             );
                           },

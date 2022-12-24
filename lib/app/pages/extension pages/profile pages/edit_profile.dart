@@ -1,29 +1,29 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, camel_case_types
 
 import 'package:chitory_app/app/pages/main%20pages/home/modules/CustomSearchDelegates.dart';
 import 'package:chitory_app/constants/constants.dart';
 import 'package:flutter/material.dart';
 
-class Folder extends StatefulWidget {
-  static String routeName = "Folder";
-  const Folder({super.key});
+class EditProfile_Screen extends StatefulWidget {
+  static String routeName = "Edit Profile";
+  const EditProfile_Screen({super.key});
 
   @override
-  State<Folder> createState() => _FolderState();
+  State<EditProfile_Screen> createState() => _EditProfile_ScreenState();
 }
 
-class _FolderState extends State<Folder> {
+class _EditProfile_ScreenState extends State<EditProfile_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 10,
-        foregroundColor: kAccentColor,
-        backgroundColor: Colors.white,
+        backgroundColor: kAccentColor,
         title: Text(
-          "My Folder",
+          "Edit Profile",
           style: TextStyle(
-            color: kAccentColor,
+            color: Colors.white,
           ),
         ),
         shape: const RoundedRectangleBorder(
@@ -41,9 +41,9 @@ class _FolderState extends State<Folder> {
                 delegate: CustomSearchDelegate(),
               );
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.search_rounded,
-              color: kAccentColor,
+              color: Colors.white,
             ),
           )
         ],
@@ -59,12 +59,8 @@ class _FolderState extends State<Folder> {
               // ignore: prefer_const_literals_to_create_immutables
               children: [
                 Container(
-                  margin: EdgeInsets.only(
-                    top: 40,
-                  ),
-                  constraints: BoxConstraints.expand(
-                    height: 400.0,
-                  ),
+                  margin: EdgeInsets.only(top: 150),
+                  constraints: BoxConstraints.expand(height: 400.0),
                   width: MediaQuery.of(context).size.width * 100,
                   decoration: BoxDecoration(
                     image: DecorationImage(

@@ -4,26 +4,25 @@ import 'package:chitory_app/app/pages/main%20pages/home/modules/CustomSearchDele
 import 'package:chitory_app/constants/constants.dart';
 import 'package:flutter/material.dart';
 
-class Folder extends StatefulWidget {
-  static String routeName = "Folder";
-  const Folder({super.key});
+class Blog extends StatefulWidget {
+  static String routeName = "Blog";
+  const Blog({super.key});
 
   @override
-  State<Folder> createState() => _FolderState();
+  State<Blog> createState() => _BlogState();
 }
 
-class _FolderState extends State<Folder> {
+class _BlogState extends State<Blog> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 10,
-        foregroundColor: kAccentColor,
-        backgroundColor: Colors.white,
+        backgroundColor: kAccentColor,
         title: Text(
-          "My Folder",
+          "Blog",
           style: TextStyle(
-            color: kAccentColor,
+            color: Colors.white,
           ),
         ),
         shape: const RoundedRectangleBorder(
@@ -41,9 +40,9 @@ class _FolderState extends State<Folder> {
                 delegate: CustomSearchDelegate(),
               );
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.search_rounded,
-              color: kAccentColor,
+              color: Colors.white,
             ),
           )
         ],
@@ -59,12 +58,8 @@ class _FolderState extends State<Folder> {
               // ignore: prefer_const_literals_to_create_immutables
               children: [
                 Container(
-                  margin: EdgeInsets.only(
-                    top: 40,
-                  ),
-                  constraints: BoxConstraints.expand(
-                    height: 400.0,
-                  ),
+                  margin: EdgeInsets.only(top: 150),
+                  constraints: BoxConstraints.expand(height: 400.0),
                   width: MediaQuery.of(context).size.width * 100,
                   decoration: BoxDecoration(
                     image: DecorationImage(
