@@ -1,10 +1,14 @@
 // ignore_for_file: file_names
 
 import 'package:chitory_app/app/screens/createaccount/widgets/createaccount_neumorphicbutton.dart';
+import 'package:chitory_app/app/screens/modules/email_field.dart';
 import 'package:chitory_app/app/screens/modules/regnumber_field.dart';
 import 'package:chitory_app/app/screens/modules/username_field.dart';
 import 'package:chitory_app/constants/constants.dart';
+import 'package:chitory_app/packages/services/firebase_auth_methods.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CreateAccount extends StatefulWidget {
   static String routeName = "CreateAccount";
@@ -15,6 +19,7 @@ class CreateAccount extends StatefulWidget {
 }
 
 class CreateAccountState extends State<CreateAccount> {
+  bool _visiblePassword = false;
   // Create a global key that will uniquely identify the Form widget and allow
   // us to validate the form
   final _formKey = GlobalKey<FormState>();
@@ -22,6 +27,14 @@ class CreateAccountState extends State<CreateAccount> {
   //Create the email and password controllerss
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+
+  void signUpUser() async {
+    FirebaseAuthMehods(FirebaseAuth.instance).signUpWithEmail(
+      email: emailController.text,
+      password: passwordController.text,
+      context: context,
+    );
+  }
 
   @override
   void dispose() {
@@ -95,17 +108,91 @@ class CreateAccountState extends State<CreateAccount> {
                           const SizedBox(
                             height: 20,
                           ),
-                          const EmailField(),
+                          EmailField(
+                            controller: emailController,
+                          ),
                           const SizedBox(
                             height: 20,
                           ),
-                          const PasswordField(),
+                          TextFormField(
+                            controller: passwordController,
+                            keyboardType: TextInputType.text,
+                            maxLength: 16,
+                            maxLengthEnforcement: MaxLengthEnforcement.enforced,
+                            obscureText: !_visiblePassword,
+                            decoration: InputDecoration(
+                              labelText: "Password",
+                              hintText: "Enter your password",
+                              prefixIcon: const Icon(
+                                Icons.lock,
+                                color: kAccentColor,
+                              ),
+                              suffixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    _visiblePassword = !_visiblePassword;
+                                  });
+                                },
+                                icon: _visiblePassword
+                                    ? const Icon(
+                                        Icons.visibility_rounded,
+                                        color: kAccentColor,
+                                      )
+                                    : Icon(
+                                        Icons.visibility_off_rounded,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                splashColor: kAccentColor,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(
+                                  100.0,
+                                ),
+                                borderSide: BorderSide(
+                                  color: Colors.grey.shade500,
+                                ),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(
+                                  100.0,
+                                ),
+                                borderSide: const BorderSide(
+                                  color: kAccentColor,
+                                  width: 1,
+                                ),
+                              ),
+                              errorBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(
+                                  100.0,
+                                ),
+                                borderSide: const BorderSide(
+                                  color: Colors.red,
+                                  width: 2.0,
+                                ),
+                              ),
+                              focusedErrorBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(
+                                  100.0,
+                                ),
+                                borderSide: const BorderSide(
+                                  color: Colors.red,
+                                  width: 2.0,
+                                ),
+                              ),
+                            ),
+                            validator: (value) {
+                              if (value!.isEmpty) {
+                                return "Enter your password!!";
+                              }
+                              return null;
+                            },
+                          ),
                           const SizedBox(
                             height: 20,
                           ),
                           CreateAccountNeumorphicButton(
                             onPressed: (() {
-                              if (_formKey.currentState!.validate()) {}
+                              signUpUser;
                             }),
                           ),
                         ],

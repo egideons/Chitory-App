@@ -1,89 +1,104 @@
-import 'package:chitory_app/constants/constants.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+// // ignore_for_file: prefer_typing_uninitialized_variables, must_be_immutable
 
-class PasswordField extends StatefulWidget {
-  const PasswordField({super.key});
+// import 'package:chitory_app/constants/constants.dart';
+// import 'package:flutter/foundation.dart';
+// import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart';
 
-  @override
-  State<PasswordField> createState() => _PasswordFieldState();
-}
+// class PasswordField extends StatefulWidget {
+//   const PasswordField({super.key, required TextEditingController controller});
 
-class _PasswordFieldState extends State<PasswordField> {
-  bool _visiblePassword = false;
-  @override
-  Widget build(BuildContext context) {
-    return TextFormField(
-      keyboardType: TextInputType.text,
-      maxLength: 16,
-      maxLengthEnforcement: MaxLengthEnforcement.enforced,
-      obscureText: !_visiblePassword,
-      decoration: InputDecoration(
-        labelText: "Password",
-        hintText: "Enter your password",
-        prefixIcon: const Icon(
-          Icons.lock,
-          color: kAccentColor,
-        ),
-        suffixIcon: IconButton(
-          onPressed: () {
-            setState(() {
-              _visiblePassword = !_visiblePassword;
-            });
-          },
-          icon: _visiblePassword
-              ? const Icon(
-                  Icons.visibility_rounded,
-                  color: kAccentColor,
-                )
-              : Icon(
-                  Icons.visibility_off_rounded,
-                  color: Colors.grey.shade500,
-                ),
-          splashColor: kAccentColor,
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(
-            100.0,
-          ),
-          borderSide: BorderSide(
-            color: Colors.grey.shade500,
-          ),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(
-            100.0,
-          ),
-          borderSide: const BorderSide(
-            color: kAccentColor,
-            width: 1,
-          ),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(
-            100.0,
-          ),
-          borderSide: const BorderSide(
-            color: Colors.red,
-            width: 2.0,
-          ),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(
-            100.0,
-          ),
-          borderSide: const BorderSide(
-            color: Colors.red,
-            width: 2.0,
-          ),
-        ),
-      ),
-      validator: (value) {
-        if (value!.isEmpty) {
-          return "Enter your password!!";
-        }
-        return null;
-      },
-    );
-  }
-}
+//   @override
+//   State<PasswordField> createState() => _PasswordFieldState();
+// }
+
+// class _PasswordFieldState extends State<PasswordField> {
+//   bool _visiblePassword = false;
+//   TextEditingController controller;
+
+//   _PasswordFieldState({required this.controller});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return TextFormField(
+//       controller: controller,
+//       keyboardType: TextInputType.text,
+//       maxLength: 16,
+//       maxLengthEnforcement: MaxLengthEnforcement.enforced,
+//       obscureText: !_visiblePassword,
+//       decoration: InputDecoration(
+//         labelText: "Password",
+//         hintText: "Enter your password",
+//         prefixIcon: const Icon(
+//           Icons.lock,
+//           color: kAccentColor,
+//         ),
+//         suffixIcon: IconButton(
+//           onPressed: () {
+//             setState(() {
+//               _visiblePassword = !_visiblePassword;
+//             });
+//           },
+//           icon: _visiblePassword
+//               ? const Icon(
+//                   Icons.visibility_rounded,
+//                   color: kAccentColor,
+//                 )
+//               : Icon(
+//                   Icons.visibility_off_rounded,
+//                   color: Colors.grey.shade500,
+//                 ),
+//           splashColor: kAccentColor,
+//         ),
+//         enabledBorder: OutlineInputBorder(
+//           borderRadius: BorderRadius.circular(
+//             100.0,
+//           ),
+//           borderSide: BorderSide(
+//             color: Colors.grey.shade500,
+//           ),
+//         ),
+//         focusedBorder: OutlineInputBorder(
+//           borderRadius: BorderRadius.circular(
+//             100.0,
+//           ),
+//           borderSide: const BorderSide(
+//             color: kAccentColor,
+//             width: 1,
+//           ),
+//         ),
+//         errorBorder: OutlineInputBorder(
+//           borderRadius: BorderRadius.circular(
+//             100.0,
+//           ),
+//           borderSide: const BorderSide(
+//             color: Colors.red,
+//             width: 2.0,
+//           ),
+//         ),
+//         focusedErrorBorder: OutlineInputBorder(
+//           borderRadius: BorderRadius.circular(
+//             100.0,
+//           ),
+//           borderSide: const BorderSide(
+//             color: Colors.red,
+//             width: 2.0,
+//           ),
+//         ),
+//       ),
+//       validator: (value) {
+//         if (value!.isEmpty) {
+//           return "Enter your password!!";
+//         }
+//         return null;
+//       },
+//     );
+//   }
+
+//   @override
+//   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+//     super.debugFillProperties(properties);
+//     properties.add(
+//         DiagnosticsProperty<TextEditingController>('controller', controller));
+//   }
+// }

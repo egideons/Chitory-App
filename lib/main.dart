@@ -1,6 +1,3 @@
-import 'package:chitory_app/app/pages/extension%20pages/dashboard%20pages/past%20q&a%20screen/ND1%20QnA/first%20semester/first%20semester%20Q&A%20screen/first%20semester%20Q&A.dart';
-import 'package:chitory_app/app/pages/home%20wrapper/homeWrapper.dart';
-import 'package:chitory_app/app/pages/main%20pages/dashboard/dashboard.dart';
 import 'package:chitory_app/app/screens/splash/startup_splashscreen.dart';
 import 'package:chitory_app/routes/routes.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Chitory',
       debugShowCheckedModeBanner: false,
-      initialRoute: HomeWrapper.routeName,
+      initialRoute: Startup_SplashScreen.routeName,
       routes: routes,
     );
   }

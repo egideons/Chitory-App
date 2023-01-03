@@ -20,13 +20,13 @@ import 'package:chitory_app/app/pages/main%20pages/dashboard/dashboard.dart';
 import 'package:chitory_app/app/pages/main%20pages/folder/folder.dart';
 import 'package:chitory_app/app/pages/main%20pages/home/home.dart';
 import 'package:chitory_app/app/pages/main%20pages/profile/profile.dart';
-import 'package:chitory_app/app/pages/main%20pages/profile/widgets/change_password_neumorphicbutton.dart';
 import 'package:chitory_app/app/screens/createAccount/createAccount.dart';
 import 'package:chitory_app/app/screens/forgotPassword/forgotPassword.dart';
 import 'package:chitory_app/app/screens/forgotPassword/verification.dart';
 import 'package:chitory_app/app/screens/onboarding/onboarding.dart';
 import 'package:chitory_app/app/screens/login/login.dart';
 import 'package:chitory_app/app/screens/splash/login_splashscreen.dart';
+import 'package:chitory_app/app/screens/splash/logout_splashscreen.dart';
 import 'package:chitory_app/app/screens/splash/startup_splashscreen.dart';
 import 'package:chitory_app/modules/wrapper/wrapper.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +35,7 @@ Map<String, WidgetBuilder> routes = {
   //Splash Screens
   Startup_SplashScreen.routeName: (context) => const Startup_SplashScreen(),
   Login_SplashScreen.routeName: (context) => const Login_SplashScreen(),
+  Logout_SplashScreen.routeName: (context) => const Logout_SplashScreen(),
 
   //Wrappers
   Wrapper.routeName: (context) => const Wrapper(),
