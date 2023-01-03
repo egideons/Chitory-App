@@ -1,8 +1,6 @@
 // ignore_for_file: file_names
 
 import 'package:chitory_app/app/screens/createaccount/widgets/createaccount_neumorphicbutton.dart';
-import 'package:chitory_app/app/screens/modules/email_field.dart';
-import 'package:chitory_app/app/screens/modules/password_field.dart';
 import 'package:chitory_app/app/screens/modules/regnumber_field.dart';
 import 'package:chitory_app/app/screens/modules/username_field.dart';
 import 'package:chitory_app/constants/constants.dart';

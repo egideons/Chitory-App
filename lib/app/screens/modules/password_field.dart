@@ -20,7 +20,6 @@ class _PasswordFieldState extends State<PasswordField> {
       obscureText: !_visiblePassword,
       decoration: InputDecoration(
         labelText: "Password",
-        // labelStyle: const TextStyle(color: kAccentColor),
         hintText: "Enter your password",
         prefixIcon: const Icon(
           Icons.lock,

@@ -6,9 +6,6 @@ class EmailField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Email text field controller
-    TextEditingController emailController = TextEditingController();
-
     return TextFormField(
       controller: emailController,
       keyboardType: TextInputType.emailAddress,
