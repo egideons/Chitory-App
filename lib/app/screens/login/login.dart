@@ -2,7 +2,6 @@ import 'package:chitory_app/app/screens/modules/createaccount_field.dart';
 import 'package:chitory_app/app/screens/modules/email_field.dart';
 import 'package:chitory_app/app/screens/modules/forgotpassword_field.dart';
 import 'package:chitory_app/app/screens/login/widgets/login_neumorphicbutton.dart';
-import 'package:chitory_app/app/screens/modules/password_field.dart';
 import 'package:chitory_app/app/screens/modules/regnumber_field.dart';
 import 'package:chitory_app/app/screens/splash/login_splashscreen.dart';
 import 'package:chitory_app/constants/constants.dart';
