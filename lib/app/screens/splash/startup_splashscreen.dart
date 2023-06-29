@@ -40,9 +40,9 @@ class Startup_SplashScreen extends StatelessWidget {
             const Spacer(),
             Container(
               padding: const EdgeInsets.only(bottom: 10.0),
-              child: Center(
+              child: const Center(
                 child: Column(
-                  children: const [
+                  children: [
                     SizedBox(
                       height: 100,
                     ),

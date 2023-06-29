@@ -55,9 +55,9 @@ class _STB122_Answers_To_Past_QuestionsSectionAState
         scrollDirection: Axis.vertical,
         child: Stack(
           clipBehavior: Clip.hardEdge,
-          children: [
+          children: const [
             Padding(
-              padding: const EdgeInsets.all(
+              padding: EdgeInsets.all(
                 10.0,
               ),
               child: Column(
@@ -65,7 +65,7 @@ class _STB122_Answers_To_Past_QuestionsSectionAState
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(
+                    padding: EdgeInsets.only(
                       top: 20.0,
                       bottom: 20.0,
                     ),
