@@ -1,12 +1,12 @@
 name: chitory_app
 description: A new Flutter project.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.5 <3.0.0'
+  sdk: ">=2.18.5 <3.0.0"
 
 dependencies:
   flutter:
@@ -25,14 +25,13 @@ dependencies:
   otp_text_field: ^1.1.3
   font_awesome_flutter: ^9.1.0
   get: ^4.6.1
-  dropdownfield: ^1.0.3
+  dropdownfield2: ^1.0.7
   firebase_auth: ^4.1.5
   firebase_analytics: ^10.0.7
   cloud_firestore: ^4.1.0
   firebase_core: ^2.4.0
   firebase_database: ^10.0.7
   firebase_app_check: ^0.1.1+7
-  
 
 dev_dependencies:
   flutter_test:
@@ -48,7 +47,7 @@ flutter_icons:
   adaptive_icon_background: "ffffff"
   adaptive_icon_foreground: "assets/Images/Light Mode Images/chitory-logo.jpg"
 
-flutter: 
+flutter:
   uses-material-design: true
 
   assets:
@@ -75,9 +74,7 @@ flutter:
     - assets/Images/Light Mode Images/institutions/Frame 1.png
     - assets/Images/Light Mode Images/book image/Frame 1.png
     - assets/Images/Light Mode Images/answers to past questions/stb 122/2021n2022/image-diagram.jpg
- 
 
- 
   # fonts:
   #   - family: Schyler
   #     fonts:

@@ -4,9 +4,8 @@ import 'package:chitory_app/app/screens/createaccount/widgets/createaccount_neum
 import 'package:chitory_app/app/screens/modules/email_field.dart';
 import 'package:chitory_app/app/screens/modules/regnumber_field.dart';
 import 'package:chitory_app/app/screens/modules/username_field.dart';
+import 'package:chitory_app/app/screens/splash/login_splashscreen.dart';
 import 'package:chitory_app/constants/constants.dart';
-import 'package:chitory_app/packages/services/firebase_auth_methods.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -19,29 +18,16 @@ class CreateAccount extends StatefulWidget {
 }
 
 class CreateAccountState extends State<CreateAccount> {
-  bool _visiblePassword = false;
   // Create a global key that will uniquely identify the Form widget and allow
   // us to validate the form
   final _formKey = GlobalKey<FormState>();
 
+//obscure text
+  bool _visiblePassword = false;
+
   //Create the email and password controllerss
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-
-  void signUpUser() async {
-    FirebaseAuthMehods(FirebaseAuth.instance).signUpWithEmail(
-      email: emailController.text,
-      password: passwordController.text,
-      context: context,
-    );
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    emailController.dispose();
-    passwordController.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -108,9 +94,7 @@ class CreateAccountState extends State<CreateAccount> {
                           const SizedBox(
                             height: 20,
                           ),
-                          EmailField(
-                            controller: emailController,
-                          ),
+                          const EmailField(),
                           const SizedBox(
                             height: 20,
                           ),
@@ -192,7 +176,13 @@ class CreateAccountState extends State<CreateAccount> {
                           ),
                           CreateAccountNeumorphicButton(
                             onPressed: (() {
-                              signUpUser;
+                              if (_formKey.currentState!.validate()) {
+                                Navigator.pushNamedAndRemoveUntil(
+                                  context,
+                                  Login_SplashScreen.routeName,
+                                  (route) => false,
+                                );
+                              }
                             }),
                           ),
                         ],
